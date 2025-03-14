@@ -1,0 +1,8 @@
+Key (hex): e9e2d59a8cdd45b3d455309e68b4433f1b6cf4d6b3dbba34bdbf9b855e5be07e
+Public (hex): 04dbf1f0a52e9e47f63390a66ba5e3204ee4ed333a930b719edcdeddc80d0783ae83ebc522e31e8394b75a2f735f43402e410f245b2a9473a561f13f1999c11156
+x (hex): dbf1f0a52e9e47f63390a66ba5e3204ee4ed333a930b719edcdeddc80d0783ae
+y (hex): 83ebc522e31e8394b75a2f735f43402e410f245b2a9473a561f13f1999c11156
+x (base64): 2/HwpS6eR/YzkKZrpeMgTuTtMzqTC3Ge3N7dyA0Hg64=
+y (base64): g+vFIuMeg5S3Wi9zX0NALkEPJFsqlHOlYfE/GZnBEVY=
+-- kty: EC, crv: secp256k1
+Done in 0.47s.

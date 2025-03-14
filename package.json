@@ -1,0 +1,23 @@
+{
+  "name": "did",
+  "version": "1.0.0",
+  "description": "w3c verifiable credentials",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "keys": "node key-generation/key.js",
+    "jwt": "node didjwt/did-jwt.js",
+    "jwt-vc": "node didjwt/did-jwt-vc.js"
+  },
+  "type": "module",
+  "author": "lemonr",
+  "license": "ISC",
+  "dependencies": {
+    "crypto": "^1.0.1",
+    "did-jwt": "^8.0.8",
+    "did-jwt-vc": "^4.0.6",
+    "did-resolver": "^4.1.0",
+    "elliptic": "^6.6.1",
+    "web-did-resolver": "^2.0.29"
+  }
+}
