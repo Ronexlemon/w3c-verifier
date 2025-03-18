@@ -18,16 +18,28 @@ const issuer = {
 // Prepare the Verifiable Credential Payload
 const vcPayload = {
   sub: 'did:web:ronex-ondimu.vercel.app',
-  nbf: 1562950282,
+  nbf: Math.floor(Date.now() / 1000),
+  exp: Math.floor(Date.now() / 1000) + 3600,
   vc: {
     '@context': ['https://www.w3.org/2018/credentials/v1'],
     type: ['VerifiableCredential'],
     credentialSubject: {
+      identity: {
+        fullName: 'Ronex Lemon',
+        birthDate: '2001-06-15',
+        nationality: 'Kenyan',
+        student_id: 'SCT221-0082/2020'
+      },
       degree: {
         type: 'BachelorDegree',
-        name: 'Baccalauréat en musiques numériques',
-        student_id: "SCT221-0082/2020"
-      }
+        name: 'Baccalauréat en musiques numériques'
+      },
+      contact: {
+        email: 'lemon@example.com',
+        phone: '+254712345678'
+      },
+      image: 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAA...'
+    
     }
   }
 }
