@@ -22,7 +22,7 @@ const verifyPresentation =async(did:string,vpjwt:string)=>{
 
 const verifyCredential =async(did:string,vcjwt:string)=>{
     const didWeb = new DID_WEB({did:did});
-    const credential = await didWeb.verifyPresentation(vcjwt);
+    const credential = await didWeb.verifyCredential(vcjwt);
     return credential;
 }
 

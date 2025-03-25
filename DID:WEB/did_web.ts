@@ -7,11 +7,20 @@ interface Issuer {
     did: string;  
     signer: Signer;  
 }
+const key ='e9e2d59a8cdd45b3d455309e68b4433f1b6cf4d6b3dbba34bdbf9b855e5be07e' //'8eb63d435de4d634bc5f3df79c361e9233f55c9c2fca097758eefb018c4c61df';
+const signer = ES256KSigner(hexToBytes(key))
+
+// Prepare an issuer
+const iissuer = {
+    did: 'did:web:ronex-ondimu.vercel.app',
+    signer: signer
+}
 
 class DID_WEB {
     public key?: string;
     public issuer?: Issuer;
     private resolver: Resolver;
+
 
     constructor({ did, key }: { did: string; key?: string }) {
         this.key = key;
@@ -33,7 +42,7 @@ class DID_WEB {
         if (!this.issuer?.signer) {
             throw new Error("Issuer signer is not defined.");
         }
-        return await createVerifiableCredentialJwt(payload, this.issuer);
+        return await createVerifiableCredentialJwt(payload, iissuer);
     };
 
     // Method to sign a Verifiable Presentation (VP)
@@ -48,7 +57,7 @@ class DID_WEB {
                 type: ['VerifiablePresentation'],
             },
         };
-        return await createVerifiablePresentationJwt(vpPayload, this.issuer);
+        return await createVerifiablePresentationJwt(vpPayload, iissuer);
     };
 
     // Method to verify a Verifiable Credential (VC)

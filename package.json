@@ -4,12 +4,13 @@
   "description": "w3c verifiable credentials",
   "main": "index.js",
   "scripts": {
+    "start": "nodemon --exec ts-node index.ts",
     "test": "echo \"Error: no test specified\" && exit 1",
     "keys": "node key-generation/key.js",
     "jwt": "node didjwt/did-jwt.js",
     "jwt-vc": "node didjwt/did-jwt-vc.js"
   },
-  "type": "module",
+  
   "author": "lemonr",
   "license": "ISC",
   "dependencies": {
@@ -19,11 +20,13 @@
     "did-resolver": "^4.1.0",
     "elliptic": "^6.6.1",
     "express": "^4.21.2",
+    "express-async-handler": "^1.2.0",
     "web-did-resolver": "^2.0.29"
   },
   "devDependencies": {
     "@types/express": "^5.0.1",
     "@types/node": "^22.13.13",
+    "nodemon": "^3.1.9",
     "ts-node": "^10.9.2",
     "typescript": "^5.8.2"
   }
