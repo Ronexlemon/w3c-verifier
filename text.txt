@@ -6,3 +6,10 @@ x (base64): 2/HwpS6eR/YzkKZrpeMgTuTtMzqTC3Ge3N7dyA0Hg64=
 y (base64): g+vFIuMeg5S3Wi9zX0NALkEPJFsqlHOlYfE/GZnBEVY=
 -- kty: EC, crv: secp256k1
 Done in 0.47s.
+
+
+
+//alice keys
+Successfully created new keypair.
+Address:     0x79F7F56298848D417126687B749fe2b45aeC5F54
+Private key: 0xc35f02053be323c86953c9891bcca8dc1cd9e8962f57ab874817796a1e3defe4
